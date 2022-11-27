@@ -6,7 +6,7 @@ Description: A plugin to properly format mastodon rss feeds to be displayed in W
 Version: 0.1
 Author: skribe
 Author URI: https://github.com/skribe/
-License: GPL2
+License: GPLv3
 */
 
 function mastodon_rss_register_widget() 
