@@ -49,6 +49,7 @@ class mastodon_rss_widget extends WP_Widget {
         $number_items = 5;
 
         // rss file to display
+        // need to preserve this in db and only collect every 10mins or so
         $file = 'https://aus.social/@skribe.rss';
 
         if ($rss = simplexml_load_file($file))
