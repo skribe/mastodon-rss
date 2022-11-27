@@ -68,7 +68,7 @@ class mastodon_rss_widget extends WP_Widget {
         }
         else
         {
-            echo __( "RSS feed failed to load', mastodon_rss_widget_domain' );
+            echo __( 'RSS feed failed to load', 'mastodon_rss_widget_domain' );
         }
         echo $args['after_widget'];
     }
