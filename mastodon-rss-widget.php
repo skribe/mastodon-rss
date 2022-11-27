@@ -45,7 +45,30 @@ class mastodon_rss_widget extends WP_Widget {
         Echo $args['before_title'] . $title . $args['after_title'];
         
         //this is where we do the work
-        echo __( 'Greetings from skribe', 'mastodon_rss_widget_domain' );
+        // number of items to display
+        $number_items = 5;
+
+        // rss file to display
+        $file = 'https://aus.social/@skribe.rss';
+
+        if ($rss = simplexml_load_file($file))
+        {
+            $i = 0;
+            foreach ($rss->channel->item as $item) 
+            {
+                echo __( '<p><a href="'. $item->link .'">' . $rss->channel->title . "</a></p>", 'mastodon_rss_widget_domain' );
+                echo __( "<p>" . $item->pubDate . "</p>", 'mastodon_rss_widget_domain' );
+                echo __( "<p>" . $item->description . "</p>", 'mastodon_rss_widget_domain' );
+        
+                // stops after displaying number of items
+                // this should be a hardcoded choice.
+                if (++$i == $number_items) break;
+            } 
+        }
+        else
+        {
+            echo __( "RSS feed failed to load', mastodon_rss_widget_domain' );
+        }
         echo $args['after_widget'];
     }
   
