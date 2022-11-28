@@ -50,7 +50,7 @@ class mastodon_rss_widget extends WP_Widget {
 
     public function widget( $args, $instance ) 
     {
-        $title = apply_filters( 'widget_title', $instance['title'] );
+        $title = apply_filters( 'Mastodon', $instance['title'] );
         echo $args['before widget'];
         
         //if title is present
@@ -93,7 +93,7 @@ class mastodon_rss_widget extends WP_Widget {
         if ( isset( $instance[ 'title' ] ) )
         $title = $instance[ 'title' ];
         else
-        $title = __( 'Mastodon', 'mastodon_rss_widget_domain' );
+        $title = __( 'Default Title', 'mastodon_rss_widget_domain' );
         ?>
         <p>
         <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
