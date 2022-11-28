@@ -3,7 +3,7 @@
  * Plugin Name:       Mastodon RSS Plugin
  * Plugin URI:        https://github.com/skribe/mastodon-rss
  * Description:       A plugin to properly format mastodon rss feeds to be displayed in Wordpress.
- * Version:           0.2
+ * Version:           0.3
  * Requires at least: 6.1
  * Requires PHP:      7.4
  * Author:            skribe
@@ -14,6 +14,13 @@
  * Text Domain:       mastodon-rss
  * Domain Path:       /languages
  */
+
+function mastodon_rss_styles()
+{
+    wp_enqueue_style( 'mastodon-rss-style', plugins_url('style.css', __FILE__) );
+} 
+
+add_action( 'wp_enqueue_scripts', 'mastodon_rss_styles');
 
 function mastodon_rss_register_widget() 
 {
@@ -63,12 +70,11 @@ class mastodon_rss_widget extends WP_Widget {
             $i = 0;
             foreach ($rss->channel->item as $item) 
             {
-                echo __( '<ul>', 'mastodon_rss_widget_domain' );
-                echo __( '<p><a href="'. $item->link .'">' . $rss->channel->title . "</a></p>", 'mastodon_rss_widget_domain' );
-                echo __( "<p>" . $item->pubDate . "</p>", 'mastodon_rss_widget_domain' );
-                echo __( "<p>" . $item->description . "</p>", 'mastodon_rss_widget_domain' );
+                echo __( '<ul class = "mastodon-rss-item">', 'mastodon_rss_widget_domain' );
+                echo __( '<p class = "mastodon-rss-title"><a href="'. $item->link .'">' . $rss->channel->title . "</a></p>", 'mastodon_rss_widget_domain' );
+                echo __( '<p class = "mastodon-rss-pubdate">' . $item->pubDate . '</p>', 'mastodon_rss_widget_domain' );
+                echo __( '<p class = "mastodon-rss-desc">' . $item->description . '</p>', 'mastodon_rss_widget_domain' );
                 echo __( '</ul>', 'mastodon_rss_widget_domain' );
-                
         
                 // stops after displaying number of items
                 // this should be a hardcoded choice.
