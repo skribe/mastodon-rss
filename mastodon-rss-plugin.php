@@ -3,7 +3,7 @@
  * Plugin Name:       Mastodon RSS Plugin
  * Plugin URI:        https://github.com/skribe/mastodon-rss
  * Description:       A plugin to properly format mastodon rss feeds to be displayed in Wordpress.
- * Version:           0.1
+ * Version:           0.2
  * Requires at least: 6.1
  * Requires PHP:      7.4
  * Author:            skribe
@@ -63,9 +63,12 @@ class mastodon_rss_widget extends WP_Widget {
             $i = 0;
             foreach ($rss->channel->item as $item) 
             {
+                echo __( '<ul>', 'mastodon_rss_widget_domain' );
                 echo __( '<p><a href="'. $item->link .'">' . $rss->channel->title . "</a></p>", 'mastodon_rss_widget_domain' );
                 echo __( "<p>" . $item->pubDate . "</p>", 'mastodon_rss_widget_domain' );
                 echo __( "<p>" . $item->description . "</p>", 'mastodon_rss_widget_domain' );
+                echo __( '</ul>', 'mastodon_rss_widget_domain' );
+                
         
                 // stops after displaying number of items
                 // this should be a hardcoded choice.
