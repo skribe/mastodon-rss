@@ -3,11 +3,11 @@
 /**
  * Fired during plugin activation
  *
- * @link       http://example.com
- * @since      1.0.0
+ * @link       		https://github.com/skribe/mastodon-rss
+ * @since      		0.1.0
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
+ * @package    		Mastodon_RSS
+ * @subpackage 		Mastodon_RSS/includes
  */
 
 /**
@@ -15,12 +15,13 @@
  *
  * This class defines all code necessary to run during the plugin's activation.
  *
- * @since      1.0.0
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
- * @author     Your Name <email@example.com>
+ * @since      		0.1.0
+ *
+ * @package         Mastodon_RSS
+ * @subpackage 		Mastodon_RSS/includes
+ * @author     		skribe
  */
-class Plugin_Name_Activator {
+class Mastodon_RSS_Activator {
 
 	/**
 	 * Short Description. (use period)
