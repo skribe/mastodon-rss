@@ -55,6 +55,7 @@ class mastodon_rss_widget extends WP_Widget {
         
         //if title is present
         If ( ! empty ( $title ) )
+        echo '<div class="widget mastodon_rss_widget" id="mastodon_rss_widget">';
         Echo $args['before_title'] . $title . $args['after_title'];
         
         //this is where we do the work
@@ -86,6 +87,7 @@ class mastodon_rss_widget extends WP_Widget {
             echo __( 'RSS feed failed to load', 'mastodon_rss_widget_domain' );
         }
         echo $args['after_widget'];
+        echo '</div>';
     }
   
     public function form( $instance ) 
