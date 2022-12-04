@@ -3,11 +3,10 @@
 /**
  * The public-facing functionality of the plugin.
  *
- * @link       http://example.com
- * @since      1.0.0
- *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/public
+ * @link            https://github.com/skribe/mastodon-rss
+ * @since           0.1.0
+ * @package         Mastodon_RSS
+ * @subpackage 		Mastodon_RSS/public
  */
 
 /**
@@ -16,25 +15,26 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the public-facing stylesheet and JavaScript.
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/public
- * @author     Your Name <email@example.com>
+ * @since           0.1.0
+ * @package         Mastodon_RSS
+ * @subpackage 		Mastodon_RSS/public
+ * @author     		skribe
  */
-class Plugin_Name_Public {
+class Mastodon_RSS_Public {
 
 	/**
 	 * The ID of this plugin.
 	 *
-	 * @since    1.0.0
+	 * @since    0.1.0
 	 * @access   private
-	 * @var      string    $plugin_name    The ID of this plugin.
+	 * @var      string    $mastodon_rss    The ID of this plugin.
 	 */
-	private $plugin_name;
+	private $mastodon_rss;
 
 	/**
 	 * The version of this plugin.
 	 *
-	 * @since    1.0.0
+	 * @since    0.1.0
 	 * @access   private
 	 * @var      string    $version    The current version of this plugin.
 	 */
@@ -43,13 +43,13 @@ class Plugin_Name_Public {
 	/**
 	 * Initialize the class and set its properties.
 	 *
-	 * @since    1.0.0
+	 * @since    0.1.0
 	 * @param      string    $plugin_name       The name of the plugin.
 	 * @param      string    $version    The version of this plugin.
 	 */
 	public function __construct( $plugin_name, $version ) {
 
-		$this->plugin_name = $plugin_name;
+		$this->mastodon_rss = $plugin_name;
 		$this->version = $version;
 
 	}
@@ -57,7 +57,7 @@ class Plugin_Name_Public {
 	/**
 	 * Register the stylesheets for the public-facing side of the site.
 	 *
-	 * @since    1.0.0
+	 * @since    0.1.0
 	 */
 	public function enqueue_styles() {
 
@@ -73,14 +73,14 @@ class Plugin_Name_Public {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/plugin-name-public.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->mastodon_rss, plugin_dir_url( __FILE__ ) . 'css/mastodon_rss-public.css', array(), $this->version, 'all' );
 
 	}
 
 	/**
 	 * Register the JavaScript for the public-facing side of the site.
 	 *
-	 * @since    1.0.0
+	 * @since    0.1.0
 	 */
 	public function enqueue_scripts() {
 
@@ -96,7 +96,7 @@ class Plugin_Name_Public {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/plugin-name-public.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->mastodon_rss, plugin_dir_url( __FILE__ ) . 'js/mastodon_rss-public.js', array( 'jquery' ), $this->version, false );
 
 	}
 
