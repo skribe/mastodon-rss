@@ -121,6 +121,11 @@ class Mastodon_RSS {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-mastodon-rss-public.php';
 
+				/**
+		 * The class responsible for defining all actions of a widget.
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-mastodon-rss-widget.php';
+
 		$this->loader = new Mastodon_RSS_Loader();
 
 	}
