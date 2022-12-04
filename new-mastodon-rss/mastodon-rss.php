@@ -107,7 +107,7 @@ class mastodon_rss_widget extends WP_Widget {
                         {
                             echo __( '<ul class = "mastodon-rss-item">', 'mastodon_rss_widget_domain' );
                             echo __( '<p class = "mastodon-rss-title"><a href="'. $item->get_permalink() .'">' . $feed_title . "</a></p>", 'mastodon_rss_widget_domain' );
-                            echo __( '<p class = "mastodon-rss-pubdate">' . $item->get_date('j F Y @ g:i a') . '</p>', 'mastodon_rss_widget_domain' );
+                            echo __( '<p class = "mastodon-rss-pubdate">' . $item->get_local_date('j F Y @ g:i a') . '</p>', 'mastodon_rss_widget_domain' );
                             echo __( '<p class = "mastodon-rss-desc">' . substr($item->get_description(), 0, 500) . '</p>', 'mastodon_rss_widget_domain' );
                             echo __( '</ul>', 'mastodon_rss_widget_domain' );                
                         }
