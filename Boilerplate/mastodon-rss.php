@@ -39,7 +39,7 @@ define( 'MASTODON_RSS_VERSION', '0.4.0' );
  */
 function activate_mastodon_rss() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-mastodon-rss-activator.php';
-	Plugin_Name_Activator::activate();
+	Mastodon_RSS_Activator::activate();
 }
 
 /**
@@ -48,7 +48,7 @@ function activate_mastodon_rss() {
  */
 function deactivate_mastodon_rss() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-mastodon-rss-deactivator.php';
-	Plugin_Name_Deactivator::deactivate();
+	Mastodon_RSS_Deactivator::deactivate();
 }
 
 register_activation_hook( __FILE__, 'activate_mastodon_rss' );
