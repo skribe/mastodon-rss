@@ -22,7 +22,7 @@ It's very basic.
     
 5. In the widget settings include the RSS feed from Mastodon (it needs to be from Mastodon otherwise it won't work).  It should look something like https://mastodon.instance/@username.rss.  Change the details to match your chosen Mastodon account then add .rss at the end (no space between the username and .rss).  
 
-***Note:*** that every Mastodon account already has a rss feed so you need do nothing to activate it
+***Note:*** Every Mastodon account already has a rss feed. You don't need to activate it for this to work.
 
 6. Update
 
