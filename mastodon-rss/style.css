@@ -1,3 +1,4 @@
+/* Minimal CSS */
 ul.mastodon-rss-item {
     list-style-type: none;
     margin-bottom: 20px;
@@ -11,3 +12,5 @@ p.mastodon-rss-title {
 p.mastodon-rss-pubdate {
   font-size: 75%;
 }
+
+p.mastodon-rss-desc {}
