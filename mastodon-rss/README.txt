@@ -1,6 +1,37 @@
-This is the first release of the Wordpress plugin.  It's not available on the Wordpress site and probably never will be.
+Mastodon RSS
 
-It's very basic.
+What it does:
+
+    It's a Wordpress widget to show Mastodon RSS feeds. 
+
+Technical reason for using this widget
+
+    - Mastodon rss feeds don't use an item title tag.  
+    
+    - With a 'normal' RSS widget this means that the feed looks something like this:
+
+    (Untitled)
+    (Untitled)
+    (Untitled)
+
+    Ugly.
+
+    With this widget your feeds should look more like this:
+
+    skribe
+    5 December, 2022 @ 11:44am
+    This is a really good widget I'm using
+
+    skribe
+    5 December, 2022 @ 11:42am
+    I've just installed the Wordpress Plugin, Mastodon-RSS.  Gee it's amazing!
+
+
+Technical reasons for not using this widget 
+
+    This is the first Wordpress plugin.
+
+    It's very basic.
 
 To use:
 
@@ -11,3 +42,6 @@ To use:
 5. In the widget settings include the RSS feed from Mastodon (it needs to be from Mastodon otherwise it won't work)
 6. Update
 7. It works! (hopefully).
+
+
+Support available at https://github.com/skribe/mastodon-rss
