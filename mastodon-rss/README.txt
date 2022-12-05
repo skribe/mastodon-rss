@@ -14,7 +14,7 @@ Technical reason for using this widget
     (Untitled)
     (Untitled)
 
-    Ugly.
+    Ugly!!
 
     With this widget your feeds should look more like this:
 
@@ -24,7 +24,7 @@ Technical reason for using this widget
 
     skribe
     5 December, 2022 @ 11:42am
-    I've just installed the Wordpress Plugin, Mastodon-RSS.  Gee it's amazing!
+    I've just installed the Wordpress Plugin, Mastodon-RSS.  Strewth, it's amazing!
 
 
 Technical reasons for not using this widget 
