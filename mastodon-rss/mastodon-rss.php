@@ -51,12 +51,10 @@ class mastodon_rss_widget extends WP_Widget {
 
     public function widget( $args, $instance ) 
     {
-        // sets the title for the instance.  Not aure it works.  
-        // Got it from a tutorial
+        // sets the title for the instance.
         $title = apply_filters( 'Mastodon Feed', $instance['title'] );
         
-        // setting up the instance array to accept the rss url
-        // not sure if needed.  I've just been coding too much in C.      
+        // setting up the instance array to accept the rss url     
         $rss_url = $instance['rss_url'];
         
         echo $args['before widget'];
@@ -106,9 +104,9 @@ class mastodon_rss_widget extends WP_Widget {
                         foreach ($items as $item)
                         {
                             echo __( '<ul class = "mastodon-rss-item">', 'mastodon_rss_widget_domain' );
-                            echo __( '<p class = "mastodon-rss-title"><a href="'. $item->get_permalink() .'">' . $feed_title . "</a></p>", 'mastodon_rss_widget_domain' );
-                            echo __( '<p class = "mastodon-rss-pubdate">' . $item->get_date('j F Y @ g:i a') . '</p>', 'mastodon_rss_widget_domain' );
-                            echo __( '<p class = "mastodon-rss-desc">' . substr($item->get_description(), 0, 500) . '</p>', 'mastodon_rss_widget_domain' );
+                            echo __( '<p class = "mastodon-rss-title"><a href="'. esc_html(strip_tags($item->get_permalink())) .'">' . $feed_title . "</a></p>", 'mastodon_rss_widget_domain' );
+                            echo __( '<p class = "mastodon-rss-pubdate">' . esc_html(strip_tags($item->get_date('j F Y @ g:i a'))) . '</p>', 'mastodon_rss_widget_domain' );
+                            echo __( '<p class = "mastodon-rss-desc">' . esc_html(strip_tags(substr($item->get_description(), 0, 500))) . '</p>', 'mastodon_rss_widget_domain' );
                             echo __( '</ul>', 'mastodon_rss_widget_domain' );                
                         }
                     }
@@ -129,7 +127,7 @@ class mastodon_rss_widget extends WP_Widget {
         if ( isset( $instance[ 'title' ] ) )
         $title = $instance[ 'title' ];
         else
-        $title = __( 'Default Title', 'mastodon_rss_widget_domain' );
+        $title = __( 'Mastodon', 'mastodon_rss_widget_domain' );
         ?>
         <p>
         <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
@@ -138,7 +136,7 @@ class mastodon_rss_widget extends WP_Widget {
         <label for="<?php print $this->get_field_id( 'rss_url' ); ?>">
 		<?php _e( 'Mastodon Feed (format: https://mastodon.instance/@username.rss)', 'mastodon_rss_widget_domain' ); ?>
 		</label>
-		<input style="width:330px;" id="<?php print $this->get_field_id( 'rss_url' ); ?>" name="<?php print $this->get_field_name( 'rss_url' ); ?>" type="text" value="<?php print $instance['rss_url']; ?>" />
+		<input style="width:330px;" id="<?php print $this->get_field_id( 'rss_url' ); ?>" name="<?php print $this->get_field_name( 'rss_url' ); ?>" type="text" value="<?php print esc_html(strip_tags($instance['rss_url'])); ?>" />
         </p>
         <?php
     }
