@@ -31,4 +31,6 @@ It's very basic.
 ---
 ## Downloads
 
-[Current Release](https://github.com/skribe/mastodon-rss/releases/download/Pre-Release/mastodon-rss-1.0.0.zip)
+Please update from the Pre-Release.  There were some potential security flaws that I've remedied in this version.
+
+[Current Release](https://github.com/skribe/mastodon-rss/releases/download/Release-1.0/mastodon-rss-1.0.1.zip)
