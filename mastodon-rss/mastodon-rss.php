@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       Mastodon RSS Plugin
+ * Plugin Name:       Mastodon RSS
  * Plugin URI:        https://github.com/skribe/mastodon-rss
  * Description:       A plugin to properly format mastodon rss feeds to be displayed in Wordpress.
  * Version:           1.0.1

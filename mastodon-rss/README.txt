@@ -1,10 +1,21 @@
-Mastodon RSS
+==================== Mastodon RSS =============================
+ Plugin URI:        https://github.com/skribe/mastodon-rss
+ Description:       A plugin to properly format mastodon rss feeds to be displayed in Wordpress.
+ Version:           1.0.1
+ Requires at least: 6.1
+ Tested up to:      6.1.1
+ Requires PHP:      7.4
+ Author:            skribe
+ Author URI:        https://github.com/skribe
+ License:           GPL v3
+ License URI:       https://www.gnu.org/licenses/gpl-3.0.html
+ Tags:              rss, mastodon, mastodon widget, Mastodon RSS, Mastodon RSS Widget, toots, toot
 
-What it does:
+===== What it does =====
 
     It's a Wordpress widget to show Mastodon RSS feeds. 
 
-Technical reason for using this widget
+===== Technical reason for using this widget =====
 
     - Mastodon rss feeds don't use an item title tag.  
     
@@ -27,13 +38,13 @@ Technical reason for using this widget
     I've just installed the Wordpress Plugin, Mastodon-RSS.  Strewth, it's amazing!
 
 
-Technical reasons for not using this widget 
+===== Technical reasons for not using this widget ===== 
 
     This is the first Wordpress plugin.
 
     It's very basic.
 
-To use:
+===== Installation and Use ======
 
 1. Install by uploading as you would any other wordpress plugin.
 2. Activate plugin
@@ -43,5 +54,6 @@ To use:
 6. Update
 7. It works! (hopefully).
 
+===== Support and bugs =====
 
-Support available at https://github.com/skribe/mastodon-rss
+https://github.com/skribe/mastodon-rss
