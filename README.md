@@ -27,3 +27,8 @@ It's very basic.
 6. Update
 
 7. It works! (hopefully).
+
+---
+## Downloads
+
+[Current Release](https://github.com/skribe/mastodon-rss/releases/download/Pre-Release/mastodon-rss-1.0.0.zip)
