@@ -6,7 +6,7 @@
 
  ## Warning
 
- This is the first release of the Wordpress plugin. It's not available on the Wordpress site and probably never will be.
+ This is the first release of the Wordpress plugin.
 
 It's very basic.
 
